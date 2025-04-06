@@ -1,9 +1,10 @@
+
 import logging
 import requests
 import time
 from telegram import Bot
 
-# KONFIGURASI (diisi sesuai punyamu)
+# Konfigurasi
 TELEGRAM_TOKEN = '7541364901:AAEJTwUsf3ke1O9ZfXinDfRcFgBZFLULfAw'
 CHAT_ID = '232604495'
 SYMBOL = 'XAUUSD=X'  # Yahoo Finance symbol untuk Gold
@@ -68,7 +69,7 @@ def main():
     while True:
         signal = check_signal()
         bot.send_message(chat_id=CHAT_ID, text=signal)
-        time.sleep(900)  # kirim sinyal tiap 15 menit
+        time.sleep(900)  # setiap 15 menit
 
 if __name__ == '__main__':
     logging.basicConfig(level=logging.INFO)
